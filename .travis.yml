@@ -24,4 +24,4 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-      condition: sender != "Travis CI"
+      if: sender != "Travis CI"
