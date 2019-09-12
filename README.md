@@ -1,7 +1,8 @@
 # vue-micro-frontend
 Create distributed Vue application with micro-frontend
 
-## Project setup
+
+## Project setup for development
 ```
 yarn install
 ```
