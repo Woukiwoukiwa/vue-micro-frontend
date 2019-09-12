@@ -11,7 +11,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts",
     "lint": "vue-cli-service lint",
-    "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
+    "postversion": "git push --tags && yarn publish . --tag latest && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "publishConfig": {
     "access": "public"
