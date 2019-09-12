@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "10"
+install:
+  - yarn install --frozen-lockfile
+script:
+  - yarn build
+cache:
+  directories:
+    - "node_modules"
+notifications:
+  email: false
+before_deploy:
+  - git config user.email "travis@travis-ci.org"
+  - git config user.name "Travis CI"
+  - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+  - git checkout master
+  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc 2> /dev/null
+deploy:
+  - provider: script
+    script: yarn version
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: yarn publish
+    skip_cleanup: true
+    on:
+      branch: master
