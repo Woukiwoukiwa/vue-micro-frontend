@@ -6,7 +6,8 @@ install:
 script:
   - yarn lint
   - yarn build
-  - echo $TRAVIS_TAG
+  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - echo $AUTHOR_NAME
 cache:
   directories:
     - "node_modules"
@@ -24,4 +25,4 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-      condition: $TRAVIS_TAG = ""
+      condition: $AUTHOR_NAME != "Travis CI"
