@@ -1,5 +1,5 @@
 import Vue, { VueConstructor } from 'vue';
-import VMicroFrontend from './VMicroFrontend';
+import VMicroFrontend from './VMicroFrontend.vue';
 
 window.Vue = Vue;
 
