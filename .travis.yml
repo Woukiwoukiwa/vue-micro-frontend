@@ -7,8 +7,6 @@ script:
   - yarn lint
   - yarn build
   - echo $TRAVIS_TAG
-  - echo ${TRAVIS_TAG}
-  - echo TRAVIS_TAG
 cache:
   directories:
     - "node_modules"
@@ -26,3 +24,4 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+      condition: $TRAVIS_TAG = ""
