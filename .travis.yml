@@ -6,6 +6,9 @@ install:
 script:
   - yarn lint
   - yarn build
+  - echo $TRAVIS_TAG
+  - echo ${TRAVIS_TAG}
+  - echo TRAVIS_TAG
 cache:
   directories:
     - "node_modules"
