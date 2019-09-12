@@ -4,6 +4,8 @@ node_js:
 install:
   - yarn install --frozen-lockfile
 script:
+  - yarn lint
+script:
   - yarn build
 cache:
   directories:
@@ -22,3 +24,4 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+      condition: sender != "Travis CI"
