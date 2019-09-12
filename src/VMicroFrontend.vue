@@ -1,11 +1,13 @@
+<template>
+  <Component :is="dynamicComponent"/>
+</template>
+<script lang="ts">
 import Vue, { VueConstructor } from 'vue';
 import 'vuex';
 import { Component, Prop, Watch } from 'vue-property-decorator';
 import { MicroFrontendDescriptor } from './types';
 
-@Component({
-    template: '<Component :is="dynamicComponent"/>',
-})
+@Component({})
 export default class VMicroFrontend extends Vue {
 
   @Prop({ type: Object, default: () => ({}) })
@@ -48,3 +50,4 @@ export default class VMicroFrontend extends Vue {
     return window[name];
   }
 }
+</script>
