@@ -43,5 +43,6 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "main": "dist/vue-micro-frontend.umd.js"
 }

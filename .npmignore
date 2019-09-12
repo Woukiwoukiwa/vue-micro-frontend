@@ -3,7 +3,6 @@
 node_modules
 .npmrc
 .rpt2_cache
-dist
 
 # local env files
 .env.local
