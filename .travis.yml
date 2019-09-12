@@ -12,6 +12,7 @@ cache:
 notifications:
   email: false
 before_deploy:
+  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
   - git config user.email "travis@travis-ci.org"
   - git config user.name "Travis CI"
   - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
@@ -23,4 +24,4 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-      if: sender != "Travis CI"
+      condition: $AUTHOR_NAME != "Travis CI"
