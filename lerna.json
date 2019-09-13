@@ -1,0 +1,17 @@
+{
+  "npmClient": "yarn",
+  "version": "independent",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/vue-micro-frontend"
+  ],
+  "command": {
+    "publish": {
+      "npmClient": "npm",
+      "conventionalCommits": true
+    },
+    "version": {
+      "message": "chore(release): release [skip ci]"
+    }
+  }
+}

@@ -1,48 +1,31 @@
 {
+  "private": true,
   "name": "vue-micro-frontend",
   "repository": {
     "type": "git",
     "url": "https://github.com/Woukiwoukiwa/vue-micro-frontend.git"
   },
   "author": "domi",
-  "version": "0.20.0",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts",
-    "lint": "vue-cli-service lint",
-    "postversion": "git push --tags && yarn publish . --tag latest && git push && echo \"Successfully released version $npm_package_version!\""
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --parallel",
+    "release:version": "lerna version --conventional-commits --yes",
+    "release:publish": "lerna publish from-package --yes"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0",
-    "vuex": "^3.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-typescript": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "lint-staged": "^8.1.5",
-    "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
+    "lerna": "^3.16.2",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "cz-conventional-changelog": "^3.0.2"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
-  "lint-staged": {
-    "*.ts": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
-  "main": "dist/vue-micro-frontend.umd.js"
+  "workspaces": [
+    "packages/vue-micro-frontend"
+  ]
 }
