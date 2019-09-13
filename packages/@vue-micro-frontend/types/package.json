@@ -1,0 +1,16 @@
+{
+    "name": "@vue-micro-frontend/types",
+    "version": "0.1.0",
+    "scripts": {
+      "semantic-release": "semantic-release -e semantic-release-monorepo"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "semantic-release": "^15.13.18",
+      "semantic-release-monorepo": "^6.1.1"
+    },
+    "typings": "src/index.d.ts"
+  }

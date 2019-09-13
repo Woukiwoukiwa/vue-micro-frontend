@@ -26,6 +26,7 @@
     }
   },
   "workspaces": [
+    "packages/@vue-micro-frontend/types",
     "packages/vue-micro-frontend"
   ]
 }
