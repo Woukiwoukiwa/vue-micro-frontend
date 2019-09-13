@@ -5,7 +5,7 @@
     "url": "https://github.com/Woukiwoukiwa/vue-micro-frontend.git"
   },
   "author": "domi",
-  "version": "0.20.3",
+  "version": "0.20.4",
   "license": "MIT",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts",
@@ -15,7 +15,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@vue-micro-frontend/types": "^0.0.0",
+    "@vue-micro-frontend/types": "^0.0.1",
     "core-js": "^2.6.5",
     "lerna": "^3.16.4",
     "vue": "^2.6.10",
