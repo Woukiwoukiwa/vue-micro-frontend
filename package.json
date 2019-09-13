@@ -5,7 +5,7 @@
     "url": "https://github.com/Woukiwoukiwa/vue-micro-frontend.git"
   },
   "author": "domi",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
