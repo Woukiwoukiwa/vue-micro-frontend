@@ -1,6 +1,6 @@
-/// <reference path="shims-logger.d.ts" />
-/// <reference path="shims-vue.d.ts" />
-/// <reference path="shims-window.d.ts" />
+import 'shims-logger.d.ts';
+import 'shims-vue.d.ts';
+import 'shims-window.d.ts';
 import Vue, { VueConstructor } from 'vue';
 import VMicroFrontend from './VMicroFrontend';
 

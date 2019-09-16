@@ -4,7 +4,7 @@ import { Component, Prop, Watch } from 'vue-property-decorator';
 import { MicroFrontendDescriptor } from '@vue-micro-frontend/types';
 
 @Component({
-  template: '<Component :is="dynamicComponent"/>'
+  template: '<Component :is="dynamicComponent"/>',
 })
 export default class VMicroFrontend extends Vue {
 
