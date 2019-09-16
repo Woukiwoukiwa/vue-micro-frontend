@@ -7,9 +7,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {},
   "devDependencies": {
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1"
   },
-  "typings": "src/index.d.ts"
+  "typings": "src/index.d.ts",
+  "description": "types for vue-micro-frontend package",
+  "keywords": [
+    "vuejs",
+    "vue-micro-frontend",
+    "type"
+  ]
 }
