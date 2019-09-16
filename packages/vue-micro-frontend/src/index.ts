@@ -1,6 +1,3 @@
-import 'shims-logger.d.ts';
-import 'shims-vue.d.ts';
-import 'shims-window.d.ts';
 import Vue, { VueConstructor } from 'vue';
 import VMicroFrontend from './VMicroFrontend';
 
