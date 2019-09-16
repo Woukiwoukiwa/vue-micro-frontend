@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -24,7 +25,8 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "declaration": true
   },
   "include": [
     "src/**/*.ts",

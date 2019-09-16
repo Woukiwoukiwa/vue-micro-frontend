@@ -8,7 +8,7 @@
   "version": "0.20.5",
   "license": "MIT",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts",
+    "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts && tsc --emitDeclarationOnly",
     "lint": "vue-cli-service lint"
   },
   "publishConfig": {
@@ -44,5 +44,6 @@
       "git add"
     ]
   },
-  "main": "dist/vue-micro-frontend.umd.js"
+  "main": "dist/vue-micro-frontend.umd.js",
+  "types": "dist/index.d.ts"
 }
