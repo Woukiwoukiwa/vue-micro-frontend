@@ -5,7 +5,7 @@
     "url": "https://github.com/Woukiwoukiwa/vue-micro-frontend.git"
   },
   "author": "domi",
-  "version": "0.20.5",
+  "version": "0.20.6",
   "license": "MIT",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-micro-frontend ./src/index.ts && tsc --emitDeclarationOnly",
