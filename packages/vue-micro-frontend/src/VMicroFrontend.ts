@@ -13,14 +13,23 @@ export default class VMicroFrontend extends Vue {
 
   private dynamicComponent: VueConstructor<Vue> | null = null;
 
+  protected render: any;
+
   @Watch('microFrontend', { immediate: true })
   protected async onMicroFrontendUpdate() {
     try {
       const component = await this.importComponent(this.microFrontend);
-      if (component.default.store) {
-        this.$store.registerModule([component.default.store.namespace], component.default.store.module);
+      if(component.render){
+        this.dynamicComponent = component;
+        this.render = (h: any) => {
+          return h(this);
+        };
+      } else {
+        this.dynamicComponent = component.default.component.default;
+        if (component.default.store) {
+          this.$store.registerModule([component.default.store.namespace], component.default.store.module);
+        }
       }
-      this.dynamicComponent = component.default.component.default;
     } catch (error) {
       Vue.$log.error('Micro-frontend error', error);
     }
