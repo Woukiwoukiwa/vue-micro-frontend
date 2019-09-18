@@ -4,7 +4,7 @@ import { Component, Prop, Watch } from 'vue-property-decorator';
 import { MicroFrontendDescriptor } from '@vue-micro-frontend/types';
 
 @Component({
-  template: '<Component :is="dynamicComponent"/>',
+  template: '<Component :is="dynamicComponent" :name="microFrontend.name"/>',
 })
 export default class VMicroFrontend extends Vue {
 
@@ -17,13 +17,9 @@ export default class VMicroFrontend extends Vue {
   protected async onMicroFrontendUpdate() {
     try {
       const component = await this.importComponent(this.microFrontend);
-      if (component.render == null) {
-        this.dynamicComponent = component.default.component.default;
-        if (component.default.store) {
-          this.$store.registerModule([component.default.store.namespace], component.default.store.module);
-        }
-      } else {
-        this.dynamicComponent = component;
+      this.dynamicComponent = component.default.component.default;
+      if (component.default.store) {
+        this.$store.registerModule([component.default.store.namespace], component.default.store.module);
       }
     } catch (error) {
       Vue.$log.error('Micro-frontend error', error);
