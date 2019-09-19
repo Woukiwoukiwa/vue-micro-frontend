@@ -4663,6 +4663,11 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es6-object-assign@1.1.0:
+  version "1.1.0"
+  resolved "https://docker-remotes.repo.int.be.continental.cloud/artifactory/api/npm/npmjs-release/es6-object-assign/-/es6-object-assign-1.1.0.tgz#c2c3582656247c39ea107cb1e6652b6f9f24523c"
+  integrity sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw=
+
 es6-promise@^4.0.3:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
@@ -11834,6 +11839,13 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
+
+vuejs-logger@^1.5.3:
+  version "1.5.3"
+  resolved "https://docker-remotes.repo.int.be.continental.cloud/artifactory/api/npm/npmjs-release/vuejs-logger/-/vuejs-logger-1.5.3.tgz#fc8b7428af9c1bc252eb7deddd5638bce3b91549"
+  integrity sha1-/It0KK+cG8JS633t3VY4vOO5FUk=
+  dependencies:
+    es6-object-assign "1.1.0"
 
 vuex@^3.0.1:
   version "3.1.1"

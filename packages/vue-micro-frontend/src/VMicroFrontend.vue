@@ -1,11 +1,11 @@
 <template>
-  <Component :is="dynamicComponent"/>
+  <Component :is="dynamicComponent" v-bind="props"/>
 </template>
 <script lang="ts">
 import Vue, { VueConstructor } from 'vue';
 import 'vuex';
 import { Component, Prop, Watch } from 'vue-property-decorator';
-import { MicroFrontendDescriptor } from '@vue-micro-frontend/types';
+import { MicroFrontendDescriptor, VueMicroFrontend } from '@vue-micro-frontend/types';
 
 @Component({})
 export default class VMicroFrontend extends Vue {
@@ -13,19 +13,22 @@ export default class VMicroFrontend extends Vue {
   @Prop({ type: Object, default: () => ({}) })
   protected microFrontend!: MicroFrontendDescriptor;
 
+  @Prop({ type: Object, default: () => ({}) })
+  protected props!: any;
+
   private dynamicComponent: VueConstructor<Vue> | null = null;
 
   @Watch('microFrontend', { immediate: true })
   protected async onMicroFrontendUpdate() {
     try {
       const component = await this.importComponent(this.microFrontend);
-      if (component.render) {
-        this.dynamicComponent = component;
-      } else {
+      if (component instanceof VueMicroFrontend) {
         this.dynamicComponent = component.default.component.default;
         if (component.default.store) {
           this.$store.registerModule([component.default.store.namespace], component.default.store.module);
         }
+      } else {
+        this.dynamicComponent = component;
       }
     } catch (error) {
       Vue.$log.error('Micro-frontend error', error);
