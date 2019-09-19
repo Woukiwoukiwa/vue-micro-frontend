@@ -1,6 +1,6 @@
 {
   "name": "@vue-micro-frontend/types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
