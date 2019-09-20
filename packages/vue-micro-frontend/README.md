@@ -11,4 +11,4 @@ npm install --save vue-micro-frontend
 ```
 
 ## Example of use
-See [Simple example](https://github.com/Woukiwoukiwa/vue-micro-frontend-examples/tree/master/simple-example)
+See [Example](https://github.com/Woukiwoukiwa/vue-micro-frontend-examples/tree/master)
