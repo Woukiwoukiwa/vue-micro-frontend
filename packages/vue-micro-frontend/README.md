@@ -1,22 +1,14 @@
 # vue-micro-frontend
 Create distributed Vue application with micro-frontend
 
-
-## Project setup for development
+## How to install
 ```
-yarn install
+yarn add vue-micro-frontend
 ```
-
-### Compiles and minifies for production
+or
 ```
-yarn run build
+npm install --save vue-micro-frontend
 ```
 
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Example of use
+See [Simple example](https://github.com/Woukiwoukiwa/vue-micro-frontend-examples/tree/master/simple-example)
