@@ -5,8 +5,7 @@
 import Vue, { VueConstructor } from 'vue';
 import 'vuex';
 import { Component, Prop, Watch } from 'vue-property-decorator';
-import { MicroFrontendDescriptor } from '@vue-micro-frontend/types';
-import { VueMicroFrontend } from '@/types';
+import { MicroFrontendDescriptor, VueMicroFrontend } from '@vue-micro-frontend/types';
 
 @Component({})
 export default class VMicroFrontend extends Vue {
