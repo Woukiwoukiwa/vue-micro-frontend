@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.13](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.12...vue-micro-frontend@0.20.13) (2019-09-19)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.12](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.11...vue-micro-frontend@0.20.12) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.11](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.10...vue-micro-frontend@0.20.11) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.10](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.9...vue-micro-frontend@0.20.10) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.9](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.8...vue-micro-frontend@0.20.9) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.8](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.7...vue-micro-frontend@0.20.8) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
+## [0.20.7](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.6...vue-micro-frontend@0.20.7) (2019-09-18)
+
+**Note:** Version bump only for package vue-micro-frontend
+
+
+
+
+
 ## [0.20.6](https://github.com/Woukiwoukiwa/vue-micro-frontend/compare/vue-micro-frontend@0.20.5...vue-micro-frontend@0.20.6) (2019-09-17)
 
 **Note:** Version bump only for package vue-micro-frontend
