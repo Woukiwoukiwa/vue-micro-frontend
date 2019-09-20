@@ -15,13 +15,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@vue-micro-frontend/types": "^0.0.3",
+    "@vue-micro-frontend/types": "^0.0.4",
     "core-js": "^2.6.5",
     "lerna": "^3.16.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
-    "vuejs-logger": "^1.5.3",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

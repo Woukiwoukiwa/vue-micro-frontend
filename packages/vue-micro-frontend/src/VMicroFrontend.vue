@@ -5,7 +5,8 @@
 import Vue, { VueConstructor } from 'vue';
 import 'vuex';
 import { Component, Prop, Watch } from 'vue-property-decorator';
-import { MicroFrontendDescriptor, VueMicroFrontend } from '@vue-micro-frontend/types';
+import { MicroFrontendDescriptor } from '@vue-micro-frontend/types';
+import { VueMicroFrontend } from '@/types';
 
 @Component({})
 export default class VMicroFrontend extends Vue {
@@ -20,20 +21,21 @@ export default class VMicroFrontend extends Vue {
 
   @Watch('microFrontend', { immediate: true })
   protected async onMicroFrontendUpdate() {
-    try {
-      const component = await this.importComponent(this.microFrontend);
-      if (component instanceof VueMicroFrontend) {
-        this.dynamicComponent = component.default.component.default;
-        if (component.default.store) {
-          this.$store.registerModule([component.default.store.namespace], component.default.store.module);
-        }
-      } else {
-        this.dynamicComponent = component;
+    const component = await this.importComponent(this.microFrontend);
+    if (this.isVueMicroFrontend(component.default)) {
+      this.dynamicComponent = component.default.component.default;
+      if (component.default.store) {
+        this.$store.registerModule([component.default.store.namespace], component.default.store.module);
       }
-    } catch (error) {
-      Vue.$log.error('Micro-frontend error', error);
+    } else {
+      this.dynamicComponent = component;
     }
   }
+
+  private isVueMicroFrontend(arg: any): arg is VueMicroFrontend {
+    return arg !== undefined && arg.component !== undefined;
+  }
+
 
   private async importComponent(descriptor: any): Promise<any> {
     const name: any = descriptor.name;
