@@ -45,5 +45,11 @@
     ]
   },
   "main": "dist/vue-micro-frontend.umd.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "vue-micro-frontend",
+    "vuejs",
+    "micro-frontend",
+    "vue micro frontend"
+  ]
 }
